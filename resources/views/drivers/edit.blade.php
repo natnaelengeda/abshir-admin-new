@@ -319,7 +319,7 @@
                                     <div id="uploding_driver_proof"></div>
                                 </div>
 
-                                {{--
+                                
                                 <div class="companyDiv" style="display: none">
                                     <div class="form-group row width-50">
                                         <label class="col-3 control-label">{{trans('lang.company_name')}}</label>
@@ -347,7 +347,7 @@
                                     </div>
 
                                 </div>
-                                --}}
+                               
 
                                 <div class="form-group row width-50 chooseRideType">
                                     <label class="col-3 control-label">{{trans('lang.choose_ride_type')}}</label>
@@ -367,7 +367,7 @@
 
                             <div class="rental_service" style="display: none">
 
-                                {{--
+                                
                                 <div class="form-group row width-100 radio-form-row d-flex">
                                     <div class="radio-form col-md-4">
                                         <input type="radio"
@@ -384,7 +384,7 @@
                                         <label class="custom-control-label">{{trans('lang.company')}}</label>
                                     </div>
                                 </div>
-                                --}}
+                               
 
                                 <div class="form-group row width-50 individualDiv" style="display: none">
                                     <label class="col-3 control-label">{{trans('lang.vehicle_type')}}</label>

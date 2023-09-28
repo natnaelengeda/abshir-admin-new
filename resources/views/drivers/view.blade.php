@@ -93,13 +93,13 @@
                                     </div>
                                 </div>
 
-                            <!--<div class="form-group row width-50">
+                            <div class="form-group row width-50">
                                 <label class="col-3 control-label">{{trans('lang.type')}}</label>
                                 <div class="col-7">
                                     <span class="type"></span>
                                 </div>
-                            </div>-->
-                            <!--<div class="company_details" style="display:none">
+                            </div>
+                            <div class="company_details" style="display:none">
                                 <div class="form-group row width-50 ">
                                     <label class="col-3 control-label">{{trans('lang.company_name')}}</label>
                                     <div class="col-7">
@@ -112,7 +112,7 @@
                                         <span class="company_address"></span>
                                     </div>
                                 </div>
-                            </div>-->
+                            </div>
 
                             </fieldset>
 
@@ -243,7 +243,7 @@
     <script type="text/javascript">
 
         var id = "{{$id}}";
-        // console.log(`ID: ${id}`);
+        console.log(id);
         var database = firebase.firestore();
         var ref = database.collection('users').where("id", "==", id);
         var photo = "";
@@ -286,7 +286,8 @@
             jQuery("#data-table_processing").show();
 
             await email_templates.get().then(async function (snapshots) {
-                emailTemplatesData = snapshots.docs[0].data();
+                // emailTemplatesData = snapshots.docs[0].data();
+                emailTemplatesData = snapshots.docs[0];
             });
 
             ref.get().then(async function (snapshots) {
@@ -426,45 +427,48 @@
                             'user_id': user_id,
                             'note': note,
                             'transactionUser': "driver",
+                            
+                        });
+                        window.location.reload();
+                    });
+                        // }).then(async function (result) {
+                        //     if (currencyAtRight) {
+                        //         amount = parseInt(amount).toFixed(decimal_degits) + "" + currentCurrency;
+                        //         newWalletAmount = newWalletAmount.toFixed(decimal_degits) + "" + currentCurrency;
+                        //     } else {
+                        //         amount = currentCurrency + "" + parseInt(amount).toFixed(decimal_degits);
+                        //         newWalletAmount = currentCurrency + "" + newWalletAmount.toFixed(decimal_degits);
+                        //     }
 
-                        }).then(async function (result) {
-                            if (currencyAtRight) {
-                                amount = parseInt(amount).toFixed(decimal_degits) + "" + currentCurrency;
-                                newWalletAmount = newWalletAmount.toFixed(decimal_degits) + "" + currentCurrency;
-                            } else {
-                                amount = currentCurrency + "" + parseInt(amount).toFixed(decimal_degits);
-                                newWalletAmount = currentCurrency + "" + newWalletAmount.toFixed(decimal_degits);
-                            }
+                        //     var formattedDate = new Date();
+                        //     var month = formattedDate.getMonth() + 1;
+                        //     var day = formattedDate.getDate();
+                        //     var year = formattedDate.getFullYear();
 
-                            var formattedDate = new Date();
-                            var month = formattedDate.getMonth() + 1;
-                            var day = formattedDate.getDate();
-                            var year = formattedDate.getFullYear();
+                        //     month = month < 10 ? '0' + month : month;
+                        //     day = day < 10 ? '0' + day : day;
 
-                            month = month < 10 ? '0' + month : month;
-                            day = day < 10 ? '0' + day : day;
+                        //     formattedDate = day + '-' + month + '-' + year;
 
-                            formattedDate = day + '-' + month + '-' + year;
+                        //     var message = emailTemplatesData.message;
+                        //     message = message.replace(/{username}/g, data.firstName + ' ' + data.lastName);
+                        //     message = message.replace(/{date}/g, formattedDate);
+                        //     message = message.replace(/{amount}/g, amount);
+                        //     message = message.replace(/{paymentmethod}/g, 'Wallet');
+                        //     message = message.replace(/{transactionid}/g, tempId);
+                        //     message = message.replace(/{newwalletbalance}/g, newWalletAmount);
 
-                            var message = emailTemplatesData.message;
-                            message = message.replace(/{username}/g, data.firstName + ' ' + data.lastName);
-                            message = message.replace(/{date}/g, formattedDate);
-                            message = message.replace(/{amount}/g, amount);
-                            message = message.replace(/{paymentmethod}/g, 'Wallet');
-                            message = message.replace(/{transactionid}/g, tempId);
-                            message = message.replace(/{newwalletbalance}/g, newWalletAmount);
+                        //     emailTemplatesData.message = message;
 
-                            emailTemplatesData.message = message;
+                        //     var url = "{{url('send-email')}}";
 
-                            var url = "{{url('send-email')}}";
+                        //     var sendEmailStatus = await sendEmail(url, emailTemplatesData.subject, emailTemplatesData.message, [data.email]);
 
-                            var sendEmailStatus = await sendEmail(url, emailTemplatesData.subject, emailTemplatesData.message, [data.email]);
-
-                            if (sendEmailStatus) {
-                                window.location.reload();
-                            }
-                        })
-                    })
+                        //     if (sendEmailStatus) {
+                        //         window.location.reload();
+                        //     }
+                        // })
+                    // });
                 } else {
                     $('#user_account_not_found_error').text('{{trans("lang.user_detail_not_found")}}');
 

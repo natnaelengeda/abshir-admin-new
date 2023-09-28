@@ -212,7 +212,7 @@
             jQuery("#data-table_processing").show();
 
             await email_templates.get().then(async function (snapshots) {
-                emailTemplatesData = snapshots.docs[0].data();
+                emailTemplatesData = snapshots.docs[0];
             });
 
             ref.get().then(async function (snapshots) {

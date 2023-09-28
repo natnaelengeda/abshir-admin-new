@@ -122,7 +122,7 @@
     var start = null;
     var user_number = [];
 
-    var ref = database.collection('users').where("role", "in", ["customer"]).orderBy('createdAt', 'desc');
+    var ref = database.collection('users').where("role", "in", ["customer"]);
 
     var placeholderImage = '';
     var append_list = '';
