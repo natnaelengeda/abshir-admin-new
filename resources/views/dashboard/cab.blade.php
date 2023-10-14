@@ -10,9 +10,9 @@
 
         <!-- ============================================================== -->
 
-        <div class="row cat-slider mb-4 mt-3" id="sections">
+        {{-- <div class="row cat-slider mb-4 mt-3" id="sections">
 
-        </div>
+        </div> --}}
 
         <!-- ============================================================== -->
 
@@ -312,6 +312,7 @@
             db.collection('users').where("role", "==", "customer").get().then((snapshot) => {
                 jQuery("#users_count").empty();
                 jQuery("#users_count").append(snapshot.docs.length);
+                    console.log("User", snapshot.docs)
             });
 
             db.collection('users').where("role", "==", "driver").where('serviceType', '==', active_type).get().then((snapshot) => {

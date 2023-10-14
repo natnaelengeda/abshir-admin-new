@@ -264,11 +264,11 @@
 
     <script>
 
-        var active_id = "631852d1bc978";
-        // var active_id = "<?php echo @$_REQUEST['id'] ?>";
+        // var active_id = "631852d1bc978";
+        var active_id = "<?php echo @$_REQUEST['id'] ?>";
         setCookie('section_id', active_id, 30);
-        var active_type = "cab-service";
-        // var active_type = "<?php echo @$_REQUEST['type'] ?>";
+        // var active_type = "cab-service";
+        var active_type = "<?php echo @$_REQUEST['type'] ?>";
         var db = firebase.firestore();
         var currency = db.collection('settings');
 
