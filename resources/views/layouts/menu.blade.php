@@ -9,11 +9,11 @@
             </a>
         </li>
 
-        <li><a class="waves-effect waves-dark" href="{!! url('section') !!}" aria-expanded="false">
+        {{-- <li><a class="waves-effect waves-dark" href="{!! url('section') !!}" aria-expanded="false">
                 <i class="mdi mdi-clipboard-text"></i>
                 <span class="hide-menu">{{trans('lang.section_plural')}}</span>
             </a>
-        </li>
+        </li> --}}
 
         <li>
             <a class="waves-effect waves-dark" href="{!! url('users') !!}" aria-expanded="false">
@@ -33,7 +33,7 @@
         </li> --}}
 
         <li class="nav-subtitle">
-            <span class="nav-subtitle-span">{{trans('lang.ecommerce_multivendor')}}</span>
+            <span class="nav-subtitle-span">Ride Service</span>
         </li>
 
         {{-- <li><a class="waves-effect waves-dark" href="{!! url('vendors') !!}" aria-expanded="false">
@@ -97,12 +97,12 @@
             </a>
         </li> --}}
 
-        <li>
+        {{-- <li>
             <a class="waves-effect waves-dark" href="{!! url('map/multivendor') !!}" aria-expanded="false">
                 <i class="mdi mdi-home-map-marker"></i>
                 <span class="hide-menu">{{trans('lang.god_eye')}}</span>
             </a>
-        </li>
+        </li> --}}
 
         {{-- <li><a class="waves-effect waves-dark" href="{!! url('orders') !!}" aria-expanded="false">
                 <i class="mdi mdi-library-books"></i>
@@ -123,10 +123,10 @@
         </li> --}}
 
         <li class="nav-subtitle">
-            <span class="nav-subtitle-span">{{trans('lang.other_services')}}</span>
+            <span class="nav-subtitle-span">Ride</span>
         </li>
 
-        <li><a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+        {{-- <li><a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
                 <i class="mdi mdi-package"></i>
                 <span class="hide-menu">{{trans('lang.parcel_plural')}}</span>
             </a>
@@ -139,7 +139,7 @@
                 <li><a href="{!! url('parcel_orders') !!}">{{trans('lang.parcel_orders')}}</a></li>
             </ul>
 
-        </li>
+        </li> --}}
 
         <li><a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
                 <i class="mdi mdi-car"></i>
@@ -166,7 +166,7 @@
             </ul>
         </li>
 
-
+{{-- 
         <li><a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
                 <i class="mdi mdi-package"></i>
                 <span class="hide-menu">{{trans('lang.rental_plural')}}</span>
@@ -179,7 +179,7 @@
                 <li><a href="{!! url('rental_orders') !!}">{{trans('lang.rental_orders')}} </a></li>
                 <li><a class="waves-effect waves-dark" href="{!! url('rentalvehicle') !!}" aria-expanded="false">{{trans('lang.rental_vehicle')}}</a></li>
             </ul>
-        </li>
+        </li> --}}
 
         <li><a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
                 <i class="fa fa-taxi"></i>
@@ -292,5 +292,5 @@
         </li>
     </ul>
 
-    <p class="web_version"></p>
+    {{-- <p class="web_version"></p> --}}
 </nav>

@@ -134,11 +134,8 @@
     var endarray = [];
     var start = null;
     var user_number = [];
-    var ref = database.collection('users').where("role", "==", "driver");
-    // var ref = database.collection('users').orderBy('createdAt', 'desc');
-  
-    var alldriver = database.collection('users').where("role", "==", "driver");
-    // var alldriver = database.collection('users').orderBy('createdAt', 'desc');
+    var ref = database.collection('users').where("role", "==", "driver").orderBy('createdAt', 'desc');
+    var alldriver = database.collection('users').where("role", "==", "driver").orderBy('createdAt', 'desc');
 
     var placeholderImage = '';
     var placeholder = database.collection('settings').doc('placeHolderImage');

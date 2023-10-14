@@ -105,7 +105,7 @@
 
                         <div class="form-group text-center m-t-20 mb-0">
                             <div class="col-xs-12">
-                                <button type="submit" class="btn btn-dark btn-lg btn-block text-uppercase waves-effect waves-light btn btn-primary">
+                                <button style="background-color: #1344e2" type="submit" class="btn btn-dark btn-lg btn-block text-uppercase waves-effect waves-light btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
                             </div>

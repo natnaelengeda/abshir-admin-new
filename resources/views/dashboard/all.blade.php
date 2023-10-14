@@ -10,9 +10,9 @@
 
         <!-- ============================================================== -->
 
-        <div class="row cat-slider mb-4 mt-3" id="sections">
+        {{-- <div class="row cat-slider mb-4 mt-3" id="sections">
 
-        </div>
+        </div> --}}
 
         <!-- ============================================================== -->
 
@@ -48,7 +48,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-6 col-lg-3 mb-3">
+                        {{-- <div class="col-sm-6 col-lg-3 mb-3">
                             <div class="card-box" onclick="location.href='{!! route('vendors') !!}'">
                                 <h5>{{trans('lang.dashboard_total_stores')}}</h5>
                                 <h2 id="vendor_count"></h2>
@@ -62,15 +62,15 @@
                                 <h2 id="order_count"></h2>
                                 <i class="mdi mdi-cart"></i>
                             </div>
-                        </div>
+                        </div> --}}
 
-                        <div class="col-sm-6 col-lg-3 mb-3">
+                        {{-- <div class="col-sm-6 col-lg-3 mb-3">
                             <div class="card-box" onclick="location.href='{!! route('items') !!}'">
                                 <h5>{{trans('lang.dashboard_total_products')}}</h5>
                                 <h2 id="product_count"></h2>
                                 <i class="mdi mdi-buffer"></i>
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="col-sm-6 col-lg-3 mb-3">
                             <div class="card-box" onclick="location.href='{!! route('payments') !!}'">
@@ -264,9 +264,11 @@
 
     <script>
 
-        var active_id = "<?php echo @$_REQUEST['id'] ?>";
+        var active_id = "631852d1bc978";
+        // var active_id = "<?php echo @$_REQUEST['id'] ?>";
         setCookie('section_id', active_id, 30);
-        var active_type = "<?php echo @$_REQUEST['type'] ?>";
+        var active_type = "cab-service";
+        // var active_type = "<?php echo @$_REQUEST['type'] ?>";
         var db = firebase.firestore();
         var currency = db.collection('settings');
 
