@@ -312,12 +312,12 @@
             db.collection('users').where("role", "==", "customer").get().then((snapshot) => {
                 jQuery("#users_count").empty();
                 jQuery("#users_count").append(snapshot.docs.length);
-                    console.log("User", snapshot.docs)
             });
 
-            db.collection('users').where("role", "==", "driver").where('serviceType', '==', active_type).get().then((snapshot) => {
+            db.collection('users').where("role", "==", "driver").where('serviceType', '==', 'cab-service').get().then((snapshot) => {
                 jQuery("#driver_count").empty();
                 jQuery("#driver_count").append(snapshot.docs.length);
+                console.log("Drivers Count : " + active_type);
             });
 
             db.collection('rides').where('status', 'in', ["Order Placed", "Order Accepted", "Order Rejected", "Order Completed", "In Transit"]).get().then((snapshot) => {
